@@ -1,0 +1,335 @@
+% !TeX program = lualatex
+%% start of file `new.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+\documentclass[12pt,a4paper,sans, colorlinks=true, linkcolor=burgundy, 
+urlcolor=burgundy]{moderncv}   % possible options include font size ('10pt', 
+%'11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 
+%'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 
+%'roman')
+
+%\patchcmd{\makehead}% <cmd>
+
+
+%{\\[2.5em]}% <search>
+%{\hfill\raisebox{-1.9cm}[0pt][0pt]{\includegraphics[width=.18\textwidth]{pratyush.png}}\\[2.5em]}%
+%% <replace>
+%{}{}% <success><failure>
+%\photo[100pt][0.2pt]{pratyush.png} % The first bracket is the picture height, 
+%%the second is the thickness of the frame around the picture (0pt for no frame)
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' 
+%(default), 'classic', 'oldstyle' and 'banking'
+
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' 
+%and 'black'
+%\renewcommand{\familydefault}{\rmdefault}    % to set the default font; use 
+%%'\sfdefault' for the default sans serif font, '\rmdefault' for the default 
+%%roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic 
+%page numbering for CVs longer than one page
+\usepackage{palatino}
+% character encoding
+\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou 
+%lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to 
+%%typeset your resume in Chinese, Japanese or Korean
+\definecolor{burgundy}{HTML}{800020}
+\moderncvcolor{burgundy}   
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\setlength{\hintscolumnwidth}{2cm}           % if you want to change the width 
+%of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you 
+%%want to force the width allocated to your name and avoid line breaks. be 
+%%careful though, the length is normally calculated to avoid any overlap with 
+%%your personal info; use this at your own typographical risks...
+
+\usepackage{academicons}
+%\newcommand*\googlescholarsocialsymbol{{\aiGoogleScholar}~}
+
+
+%\newcommand*{\httpslink}[2][]{% <=======================================%
+%	\ifthenelse{\equal{#1}{}}%%
+%	{\href{https://#2}{#2}}%
+%	{\href{https://#2}{#1}}}
+
+\makeatletter
+\RenewDocumentCommand{\social}{O{}O{}m}{%
+	\ifthenelse{\equal{#2}{}}%
+	{ 
+		\ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httpslink[#3]{www.linkedin.com/in/#3}}}{}%
+		\ifthenelse{\equal{#1}{googlescholar}}{\collectionadd[googlescholar]{socials}{\protect\httpslink[#3]{www.googlescholar.com/profile/#3}}}{}%
+		% <================================================================
+		\ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} 
+		{\protect\httpslink[#3]{www.twitter.com/#3}}}    {}%
+		\ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  
+		{\protect\httpslink[#3]{www.github.com/#3}}}     {}%
+	}
+	{\collectionadd[#1]{socials}{\protect\httpslink[#3]{#2}}}}
+\makeatother
+
+
+% personal data
+\firstname{Pratyush}
+\familyname{Kumar}
+\title{PhD researcher}               % optional, remove the line if not wanted
+\address{785 Camino Del Sur, Apt 220 \\ Santa Barbara, CA\\}    % optional, 
+%remove the line if not wanted
+\mobile{+1~(608)~695~2513}                     % optional, remove the line if 
+%not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if 
+%%not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if 
+%%not wanted
+\email{pratyushkumar@ucsb.edu}                          % optional, remove the 
+%line if not wanted
+\social[linkedin][linkedin.com/in/pratyushkumar211]{Linkedin}
+\social[github][github.com/pratyushkumar211]{Github}
+\social[googlescholar][scholar.google.com/citations?user=DH31gEoAAAAJ\&hl=en\&authuser=1]{Google
+ scholar}
+
+
+
+% optional, remove the line if not wanted
+%\extrainfo{additional information}            % optional, remove the line if 
+%%not wanted
+%\photo[110pt][0.01pt]{picture.jpg}                  % '64pt' is the height the 
+%%picture must be resized to, 0.4pt is the thickness of the frame around it 
+%%(put 
+%%it to 0pt for no frame) and 'picture' is the name of the picture file; 
+%%optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if 
+%%not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); 
+%only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+	
+	%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in 
+	%%Chinese using CJK
+	%-----       resume       
+	%---------------------------------------------------------
+	\makecvtitle
+	\vspace{-0.6in}
+	\section{Summary}
+	\cvlistitem {Expertise in process control, machine learning, model 
+	predictive control, system identification, and state estimation. Industrial 
+	experience through an internship in the heating, ventilation, and 
+	air-conditioning (HVAC) domain. Graduate research is focused on the 
+	intersection of machine learning, control systems, and system 
+	identification.}
+	
+	\section{Education}
+	\cventry{2018 - Current}{PhD in Chemical Engineering}{University of 
+	California, Santa Barbara, USA}{}{}{\textbf{GPA:} 4/4 \\
+		\textbf{PhD thesis:} ``Applications of machine learning in feedback 
+		control'' \\
+		\textbf{Supervisor:}  Dr. James B. Rawlings}
+	\cventry{2017 - 2018}{PhD in Chemical Engineering}{University of Wisconsin, 
+	Madison, USA}{}{}{
+		\textbf{GPA:} 3.71/4\\
+		Transferred to the University of California, Santa Barbara at the end 
+		of first year.}
+	\cventry{2013 - 2017}{BTech in Chemical Engineering}{Indian Institute of 
+	Technology Bombay, India}{}{}{
+		\textbf{GPA:} 9.05/10 \\
+		\textbf{BTech project:} ``Graph-based structural controllability and 
+		observability of complex systems" \\
+		\textbf{Supervisor:}  Dr. Ravindra D. Gudi
+	}
+	
+	
+	\section{Research interests}
+	\cvlistitem {Machine learning methods for model predictive control, system 
+	identification, and state estimation. Applications in chemical process 
+	systems, HVAC, and battery management systems.}
+	
+	\section{Summer internships}
+	
+	\cventry{2019}{Graduate Intern}{}{Johnson Controls 
+	International}{Milwaukee, USA}{\textbf{Supervisor}: Dr. Michael Wenzel, 
+	Advanced technology development group.}
+	\cvlistitem{Developed a system identification framework to build 
+	temperature dynamic models using both first principles grey-box and 
+	data-driven neural network (NN) models for economic optimization in 
+	commercial buildings.}
+	\cvlistitem{Conducted simulation studies and demonstrated the application 
+	of the system identification framework on operational data; assessed the 
+	feasibility of the developed temperature dynamic models for deployment in 
+	HVAC sites.}
+	
+	\cventry{2016}{Undergraduate Research Intern}{}{University of Alberta, 
+	Edmonton, Canada}{}{\textbf{Supervisor}: Dr. Vinay Prasad, Process control 
+	group.}
+	\cvlistitem{Implemented graph theory methods to analyze structural 
+	controllability and observability of complex systems using a dynamic 
+	directed graph model of the system; demonstrated the application of the 
+	algorithm on a petroleum reservoir system.}
+	
+	\section{Publications}
+	\cvlistitem{\textbf{Industrial, large-scale model predictive control with 
+	structured neural networks}. \\
+		\textit{Pratyush Kumar, James B. Rawlings, Stephen J. Wright} \\ 
+		Published in Computers and Chemical Engineering, 2021. 
+		\href{https://doi.org/10.1016/j.compchemeng.2021.107291}{Paper Link.}
+		\href{https://github.com/pratyushkumar211/industrial_nnmpc_2021}{Code.} 
+		}
+	\cvlistitem{\textbf{Modeling proportional-integral controllers in model 
+	predictive control}. \\
+		\textit{Pratyush Kumar, James B. Rawlings, Pierre Carrette} \\
+		In preparation for submission to the Journal of Process Control.}
+	\cvlistitem{\textbf{Hybrid process modeling strategies for real-time 
+			optimization and control}. \\
+		\textit{Pratyush Kumar, James B. Rawlings} \\
+		In preparation for submission to Computers and Chemical Engineering.}
+	\cvlistitem{\textbf{A grey-box system identification and disturbance 
+			forecasting framework for model predictive control in smart 
+			buildings}. \\
+		\textit{Pratyush Kumar, James B. Rawlings} \\
+		In preparation for submission to Energy and Buildings.}
+	
+	
+	\section{Selected projects}
+	
+	\cventry{2018 - Current}{Fast online execution of model predictive control 
+	using 
+		neural networks}{}{}{}{PhD thesis project, University of California, 
+		Santa Barbara.}
+	\cvlistitem{Developing algorithms to replace real-time optimization with 
+	NNs in MPC applications that solve quadratic and nonlinear optimization 
+	problems.}
+	\cvlistitem{Engineered the offline design of NNs using solutions of MPC 
+	optimization problems for use in real-time instead of online optimization 
+	solvers.}
+	\cvlistitem{Invented a structured NN architecture for offset-free setpoint 
+	tracking linear MPC applications; demonstrated the tractability of the 
+	offline network design step and online computational speed-ups of four 
+	orders of magnitude by NNs over online quadratic programming solvers.}
+	\cventry{2020 -
+		Current}{Hybrid grey-box and data-driven system identification with 
+		machine learning}{}{}{}{PhD thesis project, University of California, 
+		Santa Barbara.}
+	\cvlistitem{Developed methods to augment traditional first principles 
+	grey-box models with NNs for use in model-based feedback control 
+	applications.}
+	\cvlistitem{Investigating data requirements of the system identification 
+	approach; developing methods for optimization over NN models; conducting 
+	simulation studies to demonstrate the industrial applicability of the 
+	approach.}
+	\cventry{2020 - Current}{Modeling proportional-integral controllers in 
+	model predictive control}{}{}{}{Research project, University of California, 
+	Santa Barbara.}
+	\cvlistitem{Examined performances of MPC controllers after including 
+	dynamic models of proportional-integral controllers in MPC optimization 
+	problems. Attained noticeable performance benefits of 8-50 $\%$ over the 
+	traditional approach of not modeling PI controllers in MPC formulations.}
+	\cventry{2018}{Reinforcement learning for chemical process 
+	control}{}{}{}{PhD thesis project, University of California, Santa Barbara.}
+	\cvlistitem{Investigated reinforcement learning (RL) algorithms such as 
+	Q-learning and policy gradient for data-driven and model-free control of 
+	chemical process systems. Conducted simulation studies and compared sample 
+	efficiency of RL with the model-based controller design approach.}
+	
+	\section{Teaching Experiences}
+	\cventry{2018 - 2020}{Teaching assistant}{}{Department of Chemical 
+	Engineering, University of California, Santa Barbara}{}{Responsibilities:
+		Mentor student course projects, create assignments, deliver tutorial 
+		lectures, grade assignments, and exams. \\
+		Courses taught: Process control, Advanced process control, material and 
+		energy balances.}
+	
+	\section{Programming skills}
+	\cvlistitem {Fluent in \textbf{Python}, \textbf{MATLAB}, \textbf{Octave}, 
+	comfortable in \textbf{C++}.}
+	
+	\newpage
+	\section{Software development}
+	\cventry{2018}{MPCTools}{Model predictive control 
+	software}{}{\href{https://bitbucket.org/rawlings-group/octave-mpctools/src/master/}{Repository}}{Contributor
+	 and maintainer}
+	\cvlistitem {MPCTools is a software for linear, nonlinear, economic, and 
+	mixed-integer MPC problems; available in Python, MATLAB, and Octave; the 
+	software has been used in academic courses, conference workshops, and 
+	researchers at national laboratories and universities.}
+	\cventry{2021}{Paresto}{Parameter estimation 
+	software}{\href{https://github.com/rawlings-group/paresto}{Repository}}{}{Contributor
+	 and maintainer}
+	\cvlistitem {Paresto is a software for nonlinear grey-box parameter 
+	estimation in ordinary differential equations (ODEs) and 
+	differential-algebraic equations (DAEs); available in MATLAB and Octave.}
+	
+	\section{Selected coursework}
+	\cvlistitem{\textbf{UCSB:} Advanced model predictive control, Linear 
+	systems 1 \& 2, Nonlinear dynamics.}
+	\cvlistitem{\textbf{UW Madison:} Data structures and algorithms, 
+	computational modeling of reactor systems, machine learning, and chemical 
+	engineering mathematics.}
+	\cvlistitem{\textbf{Coursera:} Deep learning specialization offered by 
+	\href{www.deeplearning.ai}{\textcolor{burgundy}{DeepLearning.AI}.}}
+	\cvlistitem{\textbf{IIT Bombay:} Optimization, advanced process control, 
+	state estimation, data analysis, numerical analysis, and chemical process 
+	design.}
+	
+	\section{Conference presentations}
+	\cventry{}{American Institute of Chemical Engineers (AIChE) annual 
+	meetings}{}{}{}{}{}
+	\cvlistitem{Fast and large-scale model predictive control using neural 
+	networks (November, 2019).}
+	\cvlistitem{Hybrid system identification and disturbance modeling using 
+	neural networks (November, 2020).}
+	\cventry{}{Texas-Wisconsin-California-Control Consortium (TWCCC) 
+	meetings}{}{}{}{}{}
+	\cvlistitem{Large-scale model predictive control with deep neural networks 
+	(February, 2020).}
+	\cvlistitem{Nonlinear system identification with neural networks for 
+	process control (September, 2020).}
+	\cvlistitem{Data-driven and first principles based modeling for process 
+		optimization (September, 2021).}
+	
+	\section{Accolades}
+	\cvlistitem {Awarded the Timothy C. Scott fellowship at the University of 
+	Wisconsin, Madison.}
+	\cvlistitem {Granted the undergraduate research award for excellent data 
+	analytics research at the Indian Institute of Technology Bombay.}
+	\cvlistitem {Received the MITACS Globalink scholarship to pursue a research 
+	internship in Canada.}
+	\cvlistitem {Secured 99.7th percentile in the Indian Institute of 
+	Technology entrance exam out of 1.5 million participants.}
+	
+	\section{References}
+	\begin{multicols}{2}
+		\cvlistitem{\textbf{Dr. James B. Rawlings} \\ Mellichamp process 
+		control chair\\ Department of chemical engineering \\
+			UC Santa Barbara \\ jbraw@ucsb.edu \\
+			+1 (805) 893-3089}
+		\hspace{-0.4in}
+		\cvlistitem{\textbf{Dr. Michael Wenzel} \\ 
+			Technical leader \\
+			Advanced technology development group \\
+			Johnson Controls International \\
+			mike.wenzel@jci.com \\
+			+1 (414) 232-3418}
+	\end{multicols}
+	
+	%\cvlistitem{\textbf{Dr. Ravindra D. Gudi}, Professor, Chemical 
+	%Engineering, IIT Bombay, ravigudi@che.iitb.ac.in}
+\end{document}
