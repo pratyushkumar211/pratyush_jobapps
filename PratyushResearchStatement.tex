@@ -57,7 +57,7 @@
 
 %\moderncvcolor{burgundy} % CV color - options include: 'blue' (default), 
 %%'orange', 'green', 'red', 'purple', 'grey' and 'black'
-\usepackage[scale=0.78, textheight=720pt]{geometry} % Reduce document margins
+\usepackage[scale=0.8, textheight=720pt]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the 
 %%dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment 
@@ -113,36 +113,30 @@ Research summary: Machine learning tools for process operations and control
 I am passionate about developing innovative technologies for the energy 
 efficient and economically optimal operation of industrial systems. For my 
 graduate research, I am developing new algorithms to leverage machine learning 
-methods for feedback control of dynamical systems. An advancement in 
-the state-of-the-art automation algorithms may lead to the deployment of 
-advanced control methods on a broad class of industrial systems, 
-therefore, provide monetary benefits for industries in commercial applications 
-and enable energy efficient operation of industrial processes.
-
-Over the past few decades, algorithmic advancements in system identification, 
-optimal control, and optimization have led to the implementation of 
-advanced computer-aided control strategies in a wide range of industrial 
-sectors. Model predictive control (MPC) is currently the leading feedback 
-control technology implemented in several industries for the operation of 
-multi-variable and constrained processes. The MPC controller solves an 
+methods for feedback control of dynamical systems. Model predictive control 
+(MPC) is currently the leading advanced control technology implemented 
+in several industrial sectors for the operation of multi-variable and 
+constrained processes \citep{darby:nikolaou:2012}. The MPC controller solves an 
 optimization problem in real-time that is formulated based on a dynamic model 
-and operational objective of the process. Recent progresses in machine 
+and operational objectives of the process. Recent progresses in machine 
 learning \citep{lecun:bengio:hinton:2015}, improved data acquisition 
-capabilities in 
-several industries, 
-and 
-increased available computing power, present an opportunity to advance the 
-process modeling and optimization methods used for deployment of the MPC 
-technology.
+capabilities in several industries, and increased available computing power, 
+present an opportunity to advance the process modeling and optimization methods 
+currently used for deployment of the MPC technology. An advancement in the 
+modeling and optimization methods may lead to deployment of the 
+technology on a range of industrial sectors that currently do not take 
+advantage of the technology, therefore, provide monetary benefits 
+in commercial applications and enable improved energy efficient operation of 
+industrial systems.
 
 The goal of my doctoral research is to build process modeling and online 
-optimization methods using new machine learning tools. I classify 
+optimization algorithms using machine learning methods. I classify 
 my projects in two categories: a) the use of neural networks (NNs) for 
 fast online execution of MPC than currently possible with optimization solvers, 
 and b) data-driven and first principles based mathematical modeling of 
-dynamical systems. The success of projects in these two areas enables 
+dynamical systems. The success of projects in these two areas may enable 
 the deployment of the MPC technology in a broad range of industrial sectors and 
-improves the performance of the MPC controller in current or future industrial 
+improve performance of the technology in current or future industrial 
 implementations.
 
 \section*{Fast online execution of model predictive control using neural 
@@ -187,18 +181,27 @@ control of industrial processes. I am developing systematic process modeling
 frameworks to build data-driven and first principles based hybrid
 models for use in process optimization and control. An actuator-to-sensor 
 model can be constructed in the following steps: (i) perform system 
-identification tests by exciting the process with a varying manipulated input 
-signal and collect the observed actuator and sensor measurements for training, 
-(ii) identify available first principles knowledge and postulate a hybrid model 
-using NNs to represent some unknown functions such as reaction rate laws, and 
-(iii) estimate parameters in the postulated model by solving an optimization 
-problem that minimizes the prediction error of the model with the collected 
-data.
+identification tests by perturbing the process with an exciting manipulated 
+input signal and collect the observed actuator and sensor measurements for 
+training, (ii) identify available first principles knowledge to postulate a 
+hybrid model and use NNs to represent some unknown functions in the model such 
+as reaction rate laws, and (iii) estimate parameters in the postulated model by 
+solving an optimization problem that minimizes the prediction error of the 
+hybrid model on the generated training data.
 
-A caveat in using NNs as a part of the actuator-to-sensor dynamic model is that 
-the subsequent use of the overall model in optimization results in a non-convex 
-optimization problem to be solved in real time. We are currently investigating 
-methods to address this limitation. We propose the following hierarchical 
+The above described modeling steps can be used to build an accurate dynamic 
+model of an industrial process. A caveat in using NNs as a part of the 
+actuator-to-sensor dynamic model, however, is that the subsequent use of the 
+overall hybrid model in an optimization problem can give an unreliable 
+non-convex problem to be solved in real time. This issue can be mitigated 
+with a careful parameterization of the unknown functions in the hybrid model 
+using the NNs. The estimated dynamic model can be used for a plant operation in 
+a hierarchical operational framework with a combination of real-time 
+optimization (RTO) and linear MPC. A steady-state optimization problem may be 
+solved by the RTO layer and a QP can be solved by the MPC controller using a 
+linear model obtained by a linearization of the nonlinear hybrid model at the 
+
+We propose the following hierarchical 
 control strategy: (i) use the identified dynamic model to determine optimum 
 operating conditions by solving a steady state optimization problem, (ii) 
 linearize the model around the obtained optimum steady state to compute a 
