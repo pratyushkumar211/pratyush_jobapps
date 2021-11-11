@@ -112,94 +112,88 @@ Research summary: Machine learning tools for process operations and control
 
 I am passionate about developing innovative technologies for the energy 
 efficient and economically optimal operation of industrial systems. For my 
-graduate research, I am developing algorithms that leverage machine learning 
-for 
-improved model and optimization based control of dynamical systems. An 
-improvement in the 
-state-of-the-art control technology may lead to monetary benefits for 
-industries in commercial applications, and enables improved energy efficient 
-operation of 
-industrial processes.
+graduate research, I am developing new algorithms to leverage machine learning 
+methods for feedback control of dynamical systems. An advancement in 
+the state-of-the-art automation algorithms may lead to the deployment of 
+advanced control methods on a broad class of industrial systems, 
+therefore, provide monetary benefits for industries in commercial applications 
+and enable energy efficient operation of industrial processes.
 
-Over the past few decades, advancements in system identification, optimal 
-control, and optimization algorithms have led to the 
-implementation of computer-aided control strategies in a wide range of 
-industries. Model predictive control (MPC) is currently the leading feedback 
-control technology deployed in several industries for the control of large, 
-multi-variable, and constrained processes. An optimization 
-problem formulated based on a dynamic 
-model of the process and operational objective of the industrial plant is 
-solved by the MPC  
-controller. Recent 
-progresses in machine 
-learning, improved 
-data acquisition 
-capabilities in industries, and increased available computing power present an 
-opportunity to improve the MPC technology currently deployed for 
-the operation of industrial systems.
+Over the past few decades, algorithmic advancements in system identification, 
+optimal control, and optimization have led to the implementation of 
+advanced computer-aided control strategies in a wide range of industrial 
+sectors. Model predictive control (MPC) is currently the leading feedback 
+control technology implemented in several industries for the operation of 
+multi-variable and constrained processes. The MPC controller solves an 
+optimization problem in real-time that is formulated based on a dynamic model 
+and operational objective of the process. Recent progresses in machine 
+learning \citep{lecun:bengio:hinton:2015}, improved data acquisition 
+capabilities in 
+several industries, 
+and 
+increased available computing power, present an opportunity to advance the 
+process modeling and optimization methods used for deployment of the MPC 
+technology.
 
-The goal of my doctoral research is to build system identification and 
-online optimization methods using machine learning. I classify my 
-research projects in two categories: a) the use of neural networks (NNs) for 
-fast 
-online 
-execution of MPC than currently possible with optimization solvers, and b) 
-data-driven 
-and first 
-principles based mathematical modeling of industrial processes for use in 
-process optimization and control. The success of projects in these two areas 
-enables the deployment of model and optimization based control technology such 
-as MPC 
-in a broad range of industrial sectors. 
+The goal of my doctoral research is to build process modeling and online 
+optimization methods using new machine learning tools. I classify 
+my projects in two categories: a) the use of neural networks (NNs) for 
+fast online execution of MPC than currently possible with optimization solvers, 
+and b) data-driven and first principles based mathematical modeling of 
+dynamical systems. The success of projects in these two areas enables 
+the deployment of the MPC technology in a broad range of industrial sectors and 
+improves the performance of the MPC controller in current or future industrial 
+implementations.
 
 \section*{Fast online execution of model predictive control using neural 
 networks}
 
-Neural networks are a class of function approximators well known within the 
-machine learning field due to their ability to represent complex nonlinear 
-functions. The MPC controller feedback law is defined as the 
-function that represents the optimal solution of the MPC optimization problem 
-over the state-space.  
-I am investigating the potential of NNs to approximate the MPC 
-feedback law such that NNs can be used online to compute control actions in 
-place of optimization solvers, currently used for the deployment of MPC. 
-We approximate the MPC feedback law offline by: (i) generating optimal control 
-actions using an optimization solver for some set of anticipated plant 
-operational scenarios, and (ii) solve a training optimization problem using the 
-generated data to determine the NN controller.
+The optimal solution of the MPC optimization problem can be characterized as a 
+fixed function over the state-space of parameters in the optimization problem. 
+This function is known as the MPC feedback law in the literature 
+\citep{bemporad:morari:dua:pistikopoulos:2002} that is typically a complex 
+nonlinear function, challenging to explicitly 
+store and evaluate online for the MPC controller execution. Neural networks are 
+a class of function approximators well known within the machine learning field 
+for their ability to represent complex nonlinear functions. I am studying the 
+capability of NNs to approximate the MPC feedback law such that NNs can be used 
+online to compute control actions in place of using optimization solvers. The 
+MPC feedback law can be approximated offline using a NN in the following two 
+steps: (i) generate optimal control solutions using an optimization solver 
+for some set of parameters in the MPC optimization problem corresponding to 
+anticipated plant operational scenarios, and (ii) solve a NN training 
+optimization problem using the generated set of parameters and optimal control 
+solutions. The NN obtained after this training step can be used as the feedback 
+controller online during the plant operation in place of using an optimization 
+solver.
 
-The deployment of linear MPC requires solutions of quadratic programs (QP) in 
-real time. I demonstrated \cite{kumar:rawlings:wright:2021} that NNs can be 
-used to replace online QPs in large-scale MPC problems and speed-up real time 
-computations. We also proposed a new structured NN architecture that is 
-suitable to achieve offset-free closed-loop performance in feedback control 
-applications, and established robustness properties of NN controllers under the 
-presence of disturbances.
- 
-Our results to-date have been on the setpoint tracking, linear MPC optimization 
-formulation. We are currently investigating if our results can be extended to 
-nonlinear, setpoint tracking and economic MPC formulations, and moving horizon 
-estimation (MHE). The latter is a real time optimization based method for 
-nonlinear state estimation. I am conducting simulation studies to investigate 
-if NNs can be used to learn solutions of optimization problems for these 
-classes of MPC controllers and MHE  estimators. The results will demonstrate 
-that MPC controllers and MHE can be deployed on a larger class of applications 
-than possible to-date with online optimization solvers.
+The deployment of MPC using linear models requires solutions of quadratic 
+programs (QP) in real-time. I have demonstrated in 
+\cite*{kumar:rawlings:wright:2021} that NNs can be used to replace online QPs 
+in large-scale linear MPC applications. In the paper, we proposed a structured 
+NN architecture that is suitable to achieve offset-free performance in the 
+closed-loop, and illustrated that NNs can be used to speed-up real-time 
+computations by four orders of magnitude compared to an available QP solver. 
+This result encourages an investigation to examine the capabilities of NNs to 
+approximate the MPC feedback law for nonlinear, economic, and mixed-integer MPC 
+problems. I am currently performing simulation studies to study the potential 
+of NNs to approximate the MPC feedback law for a nonlinear MPC formulation with 
+complex chemical engineering examples.
 
 \section*{Data-driven and first principles based system identification}
 
 The construction of dynamic process models is a vital step in the operation and 
-control of industrial plants. I am developing systematic modeling frameworks to 
-build data-driven and first principles based dynamic models for use in feedback 
-control. We construct an actuator-to-sensor dynamic model in the following 
-steps: (i) perform system identification tests by changing manipulated 
-variables and collect the generated data for training, (ii) identify available 
-first principles knowledge to construct a grey-box model and estimate 
-parameters in this grey-box model, (iii) augment the identified grey-box model 
-with a NN and estimate parameters in the network. An optimization problem that 
-minimizes the prediction error of the model on available data is solved to 
-estimate parameters in both the grey-box and NN components, which then define 
-the overall dynamic model.
+control of industrial processes. I am developing systematic process modeling 
+frameworks to build data-driven and first principles based hybrid
+models for use in process optimization and control. An actuator-to-sensor 
+model can be constructed in the following steps: (i) perform system 
+identification tests by exciting the process with a varying manipulated input 
+signal and collect the observed actuator and sensor measurements for training, 
+(ii) identify available first principles knowledge and postulate a hybrid model 
+using NNs to represent some unknown functions such as reaction rate laws, and 
+(iii) estimate parameters in the postulated model by solving an optimization 
+problem that minimizes the prediction error of the model with the collected 
+data.
 
 A caveat in using NNs as a part of the actuator-to-sensor dynamic model is that 
 the subsequent use of the overall model in optimization results in a non-convex 
@@ -318,6 +312,6 @@ the MHE literature to establish theory for approximate neural network based MHE
 estimators.
 
 \bibliographystyle{abbrvnat}
-\bibliography{resgrppub}
+\bibliography{articles, books, proceedings, resgrppub}
 
 \end{document}
