@@ -1,22 +1,16 @@
 % !TeX program = lualatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
+% "ModernCV" CV and Cover Letter LaTeX Template Version 1.1 (9/12/12)
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% This template has been downloaded from: http://www.LaTeXTemplates.com
 %
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
+% Original author: Xavier Danaux (xdanaux@gmail.com)
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same
-% directory as this .tex file. These files provide the resume style and themes
-% used for structuring the document.
+% Important note: This template requires the moderncv.cls and .sty files to be
+% in the same directory as this .tex file. These files provide the resume style
+% and themes used for structuring the document.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,10 +19,10 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt, a4paper]{article} % Font sizes: 10, 11, or 12; paper 
-%sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; 
+%sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape;
 %font families: sans or roman
 
-%\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 
+%\moderncvstyle{classic} % CV theme - options include: 'casual' (default),
 %%'classic', 'oldstyle' and 'banking'
 
 \usepackage{float}
@@ -39,279 +33,261 @@
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 
-% character encoding
-%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou 
-%lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                         % if you need to use CJK to 
+% character encoding \usepackage[utf8]{inputenc}                  % if you are
+%not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to
 %%typeset your resume in Chinese, Japanese or Korean
 \definecolor{burgundy}{HTML}{800020}
 %\moderncvcolor{burgundy}   
-%\usepackage{fontspec}
-%\renewcommand*\familydefault{\sfdefault}
+%\usepackage{fontspec} \renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
-%\usepackage{tgheros}
-%\usepackage[style=verbose]{biblatex}
+%\usepackage{tgheros} \usepackage[style=verbose]{biblatex}
 \usepackage{natbib}
 
 %\renewcommand{\refname}{References}
 
-%\moderncvcolor{burgundy} % CV color - options include: 'blue' (default), 
+%\moderncvcolor{burgundy} % CV color - options include: 'blue' (default),
 %%'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage[scale=0.78, textheight=720pt]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the 
-%%dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment 
-%%to adjust the width of the space allocated to your name
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the
+%%dates column \setlength{\makecvtitlenamewidth}{10cm} % For the 'classic'
+%style, uncomment %to adjust the width of the space allocated to your name
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-%\firstname{\LARGE{Pratyush}} % Your first name
-%\familyname{\LARGE{Kumar}} % Your last name
+%\firstname{\LARGE{Pratyush}} % Your first name \familyname{\LARGE{Kumar}} %
+%Your last name
 
 %\author{Pratyush Kumar}
 
-% All information in this block is optional, comment out any lines you don't 
-%need
-%\title{Pratyush Kumar \\ Research Statement: Machine learning tools 
-%for process operations and control}
-%\address{785 Camino Del Sur, Apt 220}{}
-%\mobile{(302) 584 3464}
-%\phone{(000) 111 1112}
-%\fax{(000) 111 1113}
+% All information in this block is optional, comment out any lines you don't
+%need \title{Pratyush Kumar \\ Research Statement: Machine learning tools for
+%process operations and control} \address{785 Camino Del Sur, Apt 220}{}
+%\mobile{(302) 584 3464} \phone{(000) 111 1112} \fax{(000) 111 1113}
 %\email{ethan.eagle@gmail.com}
-%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first 
-%%argument is the url for the clickable link, the second argument is the url 
-%%displayed in the template - this allows special characters to be displayed 
-%%such 
-%%as the tilde in this example
-%\extrainfo{additional information}
-%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture 
-%%height, the second is the thickness of the frame around the picture (0pt for 
-%%no 
-%%frame)
-%\quote{"A witty and playful quotation" - John Smith}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first
+%%argument is the url for the clickable link, the second argument is the url
+%%displayed in the template - this allows special characters to be displayed
+%%such %as the tilde in this example \extrainfo{additional information}
+%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture
+%%height, the second is the thickness of the frame around the picture (0pt for
+%%no %frame) \quote{"A witty and playful quotation" - John Smith}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
-\noindent \large{Pratyush Kumar}
-\vspace{0.1in} \\
-Research summary: Machine learning tools for process operations and control
+	
+\noindent \large{Pratyush Kumar} \vspace{0.1in} \\
+Research summary: Machine learning tools for model predictive control
 \normalsize	
 
 % Print the CV title
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%   EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \vspace{0.1in}
 %\hline
 \section*{Introduction}
 
-I am passionate about developing innovative technologies for the energy 
-efficient and economically optimal operation of industrial systems. For my 
-graduate research, I am developing new algorithms to leverage machine learning 
-methods for feedback control of dynamical systems. An advancement in 
-the state-of-the-art automation algorithms may lead to the deployment of 
-advanced control methods on a broad class of industrial systems, 
-therefore, provide monetary benefits for industries in commercial applications 
-and enable energy efficient operation of industrial processes.
+I am interested in developing innovative technologies for energy efficient and
+economically optimal operation of industrial systems. For my graduate research,
+I am developing new algorithms to leverage machine learning methods for improved
+feedback control of dynamical systems. An advancement in the state-of-the-art
+automation algorithms may lead to the deployment of advanced control methods on
+a broad class of industrial systems, and therefore, provide monetary benefits
+for industries in commercial applications and enable energy efficient operation
+of industrial processes.
 
-Over the past few decades, algorithmic advancements in system identification, 
-optimal control, and optimization have led to the implementation of 
-advanced computer-aided control strategies in a wide range of industrial 
-sectors. Model predictive control (MPC) is currently the leading feedback 
-control technology implemented in several industries for the operation of 
-multi-variable and constrained processes. The MPC controller solves an 
-optimization problem in real-time that is formulated based on a dynamic model 
-and operational objective of the process. Recent progresses in machine 
-learning \citep{lecun:bengio:hinton:2015}, improved data acquisition 
-capabilities in 
-several industries, 
-and 
-increased available computing power, present an opportunity to advance the 
-process modeling and optimization methods used for deployment of the MPC 
-technology.
+Over the past few decades, advancements in system identification, optimal
+control and optimization algorithms have led to the implementation of advanced
+computer-aided control strategies in a wide range of industrial sectors. Model
+predictive control (MPC) is currently the leading feedback control technology
+implemented in several industries for the operation of multi-variable and
+constrained processes. An MPC controller solves optimization problems in
+real-time that are formulated based on a dynamic model and operational objective
+of the process. Recent progress in machine learning
+\citep{lecun:bengio:hinton:2015}, improved data acquisition capabilities in
+several industries, and increased available computing power, present an
+opportunity to advance the process modeling and optimization methods used for
+deployment of the MPC technology.
 
-The goal of my doctoral research is to build process modeling and online 
-optimization methods using new machine learning tools. I classify 
-my projects in two categories: a) the use of neural networks (NNs) for 
-fast online execution of MPC than currently possible with optimization solvers, 
-and b) data-driven and first principles based mathematical modeling of 
-dynamical systems. The success of projects in these two areas enables 
-the deployment of the MPC technology in a broad range of industrial sectors and 
-improves the performance of the MPC controller in current or future industrial 
-implementations.
+The goal of my doctoral research is to build process modeling and online
+optimization methods using machine learning tools. I classify my projects in two
+categories: a) the use of neural networks (NNs) for fast online execution of MPC
+than currently possible with optimization solvers, and b) data-driven and first
+principles based mathematical modeling of dynamical systems. The success of
+projects in these two areas enables the deployment of the MPC technology in a
+broad range of industrial sectors and improves the performance of the MPC
+controller in current or future industrial implementations.
 
-\section*{Fast online execution of model predictive control using neural 
-networks}
+\section*{Fast online execution of model predictive control using neural
+	networks}
 
-The optimal solution of the MPC optimization problem can be characterized as a 
-fixed function over the state-space of parameters in the optimization problem. 
-This function is known as the MPC feedback law in the literature 
-\citep{bemporad:morari:dua:pistikopoulos:2002} that is typically a complex 
-nonlinear function, challenging to explicitly 
-store and evaluate online for the MPC controller execution. Neural networks are 
-a class of function approximators well known within the machine learning field 
-for their ability to represent complex nonlinear functions. I am studying the 
-capability of NNs to approximate the MPC feedback law such that NNs can be used 
-online to compute control actions in place of using optimization solvers. The 
-MPC feedback law can be approximated offline using a NN in the following two 
-steps: (i) generate optimal control solutions using an optimization solver 
-for some set of parameters in the MPC optimization problem corresponding to 
-anticipated plant operational scenarios, and (ii) solve a NN training 
-optimization problem using the generated set of parameters and optimal control 
-solutions. The NN obtained after this training step can be used as the feedback 
-controller online during the plant operation in place of using an optimization 
-solver.
+The optimal solution of the MPC optimization problem can be characterized as a
+fixed function over the state-space of parameters in the optimization problem.
+This function is known as the MPC feedback law in the literature
+\citep{bemporad:morari:dua:pistikopoulos:2002}, which is typically a complex
+nonlinear function, challenging to explicitly store and evaluate online for the
+MPC controller execution. Neural networks (NNs) are a class of function
+approximators well known within the machine learning field for their ability to
+represent complex nonlinear functions. I am studying the capability of NNs to
+approximate the MPC feedback law such that NNs can be used online to compute
+control actions in place of using optimization solvers. The MPC feedback law can
+be approximated offline using a NN in the following two steps: (i) generate
+optimal control solutions using an optimization solver for some set of
+parameters in the MPC optimization problem corresponding to anticipated plant
+operational scenarios, and (ii) solve a NN training optimization problem using
+the generated set of parameters and optimal control solutions. The NN obtained
+after this training step can be used as the feedback controller online during
+the plant operation in place of using an optimization solver.
 
-The deployment of MPC using linear models requires solutions of quadratic 
-programs (QP) in real-time. I have demonstrated in 
-\cite*{kumar:rawlings:wright:2021} that NNs can be used to replace online QPs 
-in large-scale linear MPC applications. In the paper, we proposed a structured 
-NN architecture that is suitable to achieve offset-free performance in the 
-closed-loop, and illustrated that NNs can be used to speed-up real-time 
-computations by four orders of magnitude compared to an available QP solver. 
-This result encourages an investigation to examine the capabilities of NNs to 
-approximate the MPC feedback law for nonlinear, economic, and mixed-integer MPC 
-problems. I am currently performing simulation studies to study the potential 
-of NNs to approximate the MPC feedback law for a nonlinear MPC formulation with 
+The deployment of the MPC technology using linear models requires solutions of
+quadratic programs (QP) in real-time. I have demonstrated in
+\cite*{kumar:rawlings:wright:2021} that NNs can be used to replace online QPs in
+large-scale linear MPC applications. In that paper, we proposed a structured NN
+architecture that is suitable to achieve offset-free performance in the
+closed-loop, and illustrated that NNs can be used to speed up real-time
+computations by four orders of magnitude compared to an available QP solver.
+This result encourages an investigation to examine the capabilities of NNs to
+approximate the MPC feedback law for nonlinear, economic, and mixed-integer MPC
+problems. I am currently performing simulation studies to study the potential of
+NNs to approximate the MPC feedback law for a nonlinear MPC formulation with
 complex chemical engineering examples.
 
 \section*{Data-driven and first principles based system identification}
 
-The construction of dynamic process models is a vital step in the operation and 
-control of industrial processes. I am developing systematic process modeling 
-frameworks to build data-driven and first principles based hybrid
-models for use in process optimization and control. An actuator-to-sensor 
-model can be constructed in the following steps: (i) perform system 
-identification tests by exciting the process with a varying manipulated input 
-signal and collect the observed actuator and sensor measurements for training, 
-(ii) identify available first principles knowledge and postulate a hybrid model 
-using NNs to represent some unknown functions such as reaction rate laws, and 
-(iii) estimate parameters in the postulated model by solving an optimization 
-problem that minimizes the prediction error of the model with the collected 
-data.
+The construction of dynamic process models is a vital step in the operation and
+control of industrial processes. I am developing systematic process modeling
+frameworks to build data-driven and first principles based hybrid models for use
+in process optimization and control. An actuator-to-sensor model can be
+constructed in the following steps: (i) perform system identification tests by
+exciting the process with a varying manipulated input signal and collect the
+observed actuator and sensor measurements for training, (ii) identify available
+first principles knowledge and postulate a hybrid model using NNs to represent
+some unknown functions in the model such as reaction rate laws, and (iii)
+estimate parameters in the postulated model by solving an optimization problem
+that minimizes the prediction error of the model on the collected data.
 
-A caveat in using NNs as a part of the actuator-to-sensor dynamic model is that 
-the subsequent use of the overall model in optimization results in a non-convex 
-optimization problem to be solved in real time. We are currently investigating 
-methods to address this limitation. We propose the following hierarchical 
-control strategy: (i) use the identified dynamic model to determine optimum 
-operating conditions by solving a steady state optimization problem, (ii) 
-linearize the model around the obtained optimum steady state to compute a 
-linear model for subsequent use in an MPC controller. Since a linear model is 
-used in  MPC, solutions of QPs is required in real time by the MPC controller. 
-The steady state optimization problem remains non-convex, however, we emphasize 
-that this optimization problem can be solved infrequently relative to the MPC 
-execution frequency. We have compelling simulation results with this 
-hierarchical operational strategy on chemical process examples. We are 
-currently preparing an article for publication on this project.
+A caveat in using NNs as a part of the actuator-to-sensor dynamic model is that
+the subsequent use of the model in an optimization problem can result in a
+non-convex problem to be solved in real-time. We are currently investigating
+methods to mitigate this limitation with a focus on the following two
+approaches: (i) the hybrid model can be developed with an ample amount of first
+principles knowledge such that the resulting optimization landscape of the
+hybrid model is closer to the optimization landscape of the true process under
+operation, and (ii) use the hybrid model in a steady-state optimization
+formulation and pass the solution to this steady-state problem as setpoints to
+an MPC controller that uses a linear model obtained by linearization of the
+hybrid model at the steady-state optimum. Since a linear model is used by the
+MPC controller, solutions of QPs is required in real-time by the MPC controller.
+The steady-state optimization problem remains non-convex. However, we emphasize
+that this optimization problem can be solved infrequently relative to the MPC
+execution frequency. I am performing simualation studies with chemical
+engineering examples such as polymerization reactors to illustrate the
+application of the above described modeling and optimization approach.
 
-In some industrial applications, enough first principles knowledge is available 
-about the plant such that a NN is not required in the actuator-to-sensor model. 
-However, the plant could be affected by some noticeable measured or unmeasured 
-disturbances with specific patterns in time. Commercial buildings are an 
-example of such application, where accurate thermal dynamic models can be 
-constructed but the buildings are affected by unmeasured disturbances such as 
-heat generated by occupants in the building, electrical equipment, etc. In such 
-cases, NNs can be used to construct forecasts of the disturbances for use in 
-MPC optimization problems. Since NNs are only used to make disturbance 
-forecasts, the MPC optimization problem is not a challenging non-convex 
-optimization problem. I am performing simulation studies to demonstrate the 
-application of NNs for disturbance modeling in this class of industrial systems.
+In some industrial applications, enough first principles knowledge is available
+about the plant such that a NN is not required in the actuator-to-sensor model.
+However, the plant can be affected by some noticeable measured or unmeasured
+disturbances with specific patterns in time such as commercial buildings, in
+which an accurate thermal dynamic model can be constructed but the buildings are
+affected by unmeasured disturbances such as heat generated by occupants in the
+building, electrical equipment, etc. In such an application, NNs can be used to
+construct forecasts of the disturbances for use in an economic MPC optimization
+problem. Since NNs are only used to make disturbance forecasts, the MPC
+optimization problem is not a non-convex problem. I am performing simulation
+studies to demonstrate the application of NNs for disturbance modeling and
+forecasting in heating, ventilation, and air-conditioning (HVAC) applications.
 
-\section*{Future research interests}
+\section*{Summary}
 
-I am interested to pursue a career as a research scientist at a US national 
-laboratory and develop new machine learning and statistics based 
-feedback control methods. I believe my PhD research has given me the 
-experience, background, and skills to investigate and develop new control 
-technologies. I would be excited to pursue the research projects already 
-defined for the post-doctoral position or I am also interested to collaborate 
-with researchers at the laboratory and pursue the following research ideas.
-
+During my PhD journey, I have worked on research projects at the intersection of
+machine learning and model predictive control. In my future research career, I
+am interested to develop control and automation methods using emerging data
+science tools, with an emphasis on industrial applications in sectors such as
+buildings, battery management systems, chemical processes, and autonomous
+vehicles. Therefore, I am excited to pursue a post-doctoral research position at
+the intersection of machine learning, statistics, and feedback control. I
+believe my PhD research has given me the background and experience to develop
+new control technologies that have an industrial impact.  
 %\subsection*{Fast mixed-integer MPC with neural networks}
 %
-%In some applications, the manipulated actuators can only take some 
-%discrete values rather than a continuum of values in a constraint set. For such 
-%applications, it is advantageous to consider the discrete actuators as integer 
-%decision variables in the MPC optimization problem, and solve mixed-integer 
-%programs online for MPC deployment. The start-of-the-art mixed-integer 
-%programming solvers can get slow, however, for moderate to large sized MPC 
-%problems. I propose to study the applications of NNs to approximate solutions 
-%of mixed-integer programs, by designing the NNs offline based on the solutions 
-%of mixed-integer problems, so that NNs can be used in real-time as a 
+%In some applications, the manipulated actuators can only take some discrete
+%values rather than a continuum of values in a constraint set. For such
+%applications, it is advantageous to consider the discrete actuators as integer
+%decision variables in the MPC optimization problem, and solve mixed-integer
+%programs online for MPC deployment. The start-of-the-art mixed-integer
+%programming solvers can get slow, however, for moderate to large sized MPC
+%problems. I propose to study the applications of NNs to approximate solutions
+%of mixed-integer programs, by designing the NNs offline based on the solutions
+%of mixed-integer problems, so that NNs can be used in real-time as a
 %replacement for  mixed-integer optimization problems.
 %
 %\subsection*{Image-based model predictive control}
 %
-%With the growing data acquisition capabilities in industries, real-time image 
-%measurements are becoming prevalent in several industries such as autonomous 
-%vehicles in the self-driving car industry or crystallization processes in the 
-%chemical industry. The current MPC technology utilizes measurements from 
-%sensors that provide numerical values of the measured quantity. Image 
-%measurements may contain more information about the process being controlled 
-%compared with a typical numeric sensor. I am interested to develop algorithms 
-%that combine image measurements with typical numeric sensors to provide 
+%With the growing data acquisition capabilities in industries, real-time image
+%measurements are becoming prevalent in several industries such as autonomous
+%vehicles in the self-driving car industry or crystallization processes in the
+%chemical industry. The current MPC technology utilizes measurements from
+%sensors that provide numerical values of the measured quantity. Image
+%measurements may contain more information about the process being controlled
+%compared with a typical numeric sensor. I am interested to develop algorithms
+%that combine image measurements with typical numeric sensors to provide
 %improved feedback information for model and optimization based control methods.
 %
-%%\subsection*{Model-based reinforcement learning with hybrid process models}
+%%\subsection*{Model-based reinforcement learning with hybrid process %models}
 %%
-%%Black-box machine learning models of process systems are not interpretable and 
-%%they often provide no intuition about the internal model structure used to 
-%%make 
-%%the final prediction. The models often require large training data sets, and 
-%%can become impractical to train in industrial applications. A hybrid process 
-%%modeling framework is preferred over the Black-box approach due 
-%%interpretability and maintainability. Hybrid models can be developed by 
-%%combining first-principles based knowledge about the plant with neural 
-%%networks. The parameters (weights) in the neural network component of the 
-%%model 
-%%can be estimated from data. The hybrid models can still be sometimes difficult 
-%%to use in process optimization, due to non-convexity in the optimization with 
-%%the use of neural networks. However, the developed hybrid model can be used to 
-%%generate data for a Q-learning algorithm and subsequently obtain an 
-%%approximate 
-%%controller for online implementation.
+%%Black-box machine learning models of process systems are not %interpretable
+%and %they often provide no intuition about the internal model structure used
+%%to %make %the final prediction. The models often require large training data
+%sets, %and %can become impractical to train in industrial applications. A
+%hybrid %process %modeling framework is preferred over the Black-box approach
+%due %interpretability and maintainability. Hybrid models can be developed by
+%%combining first-principles based knowledge about the plant with neural
+%%networks. The parameters (weights) in the neural network component of the
+%%model %can be estimated from data. The hybrid models can still be sometimes
+%%difficult %to use in process optimization, due to non-convexity in the
+%optimization %with %the use of neural networks. However, the developed hybrid
+%model can be %used to %generate data for a Q-learning algorithm and
+%subsequently obtain an %approximate %controller for online implementation.
 %
 %\subsection*{Stability theory of approximate neural network controllers}
 %
-%While several researchers have proposed the use of neural networks to 
-%approximate the MPC feedback law for fast online implementation of MPC, the 
-%stability theory of neural networks remains an open issue. I am interested in 
-%the development of algorithms to obtain stability by design in neural network 
+%While several researchers have proposed the use of neural networks to
+%approximate the MPC feedback law for fast online implementation of MPC, the
+%stability theory of neural networks remains an open issue. I am interested in
+%the development of algorithms to obtain stability by design in neural network
 %controllers. 
 %
 %\subsection*{Nonlinear state estimation using neural networks}
 %
-%State estimation of nonlinear systems is an important research area with broad 
-%industrial impact in performance monitoring and output-feedback MPC 
-%implementation. Moving horizon estimation (MHE) is an optimization based method 
-%for state estimation in nonlinear systems. A nonlinear optimization problem is 
-%solved at every sample time to estimate the state of the system from 
-%measurements. Approximating this nonlinear optimization problem with neural 
-%networks has been proposed in . I am interested in investigating the benefits 
-%and limitations of this approach as well as use recently developed theory in 
-%the MHE literature to establish theory for approximate neural network based MHE 
+%State estimation of nonlinear systems is an important research area with broad
+%industrial impact in performance monitoring and output-feedback MPC
+%implementation. Moving horizon estimation (MHE) is an optimization based method
+%for state estimation in nonlinear systems. A nonlinear optimization problem is
+%solved at every sample time to estimate the state of the system from
+%measurements. Approximating this nonlinear optimization problem with neural
+%networks has been proposed in . I am interested in investigating the benefits
+%and limitations of this approach as well as use recently developed theory in
+%the MHE literature to establish theory for approximate neural network based MHE
 %estimators.
 %
 %\subsection*{Noise covariance estimation methods for improved state estimation}
 %
-%State estimation of nonlinear systems is an important research area with broad 
-%industrial impact in performance monitoring and output-feedback MPC 
-%implementation. Moving horizon estimation (MHE) is an optimization based method 
-%for state estimation in nonlinear systems. A nonlinear optimization problem is 
-%solved at every sample time to estimate the state of the system from 
-%measurements. Approximating this nonlinear optimization problem with neural 
-%networks has been proposed in . I am interested in investigating the benefits 
-%and limitations of this approach as well as use recently developed theory in 
-%the MHE literature to establish theory for approximate neural network based MHE 
+%State estimation of nonlinear systems is an important research area with broad
+%industrial impact in performance monitoring and output-feedback MPC
+%implementation. Moving horizon estimation (MHE) is an optimization based method
+%for state estimation in nonlinear systems. A nonlinear optimization problem is
+%solved at every sample time to estimate the state of the system from
+%measurements. Approximating this nonlinear optimization problem with neural
+%networks has been proposed in . I am interested in investigating the benefits
+%and limitations of this approach as well as use recently developed theory in
+%the MHE literature to establish theory for approximate neural network based MHE
 %estimators.
 
 \bibliographystyle{abbrvnat}
 \bibliography{articles, books, proceedings, resgrppub}
-
+	
 \end{document}
